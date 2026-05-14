@@ -1,5 +1,4 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const axios = require("axios");
 require("dotenv").config();
@@ -9,26 +8,39 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log("MongoDB Connected"))
-.catch((err) => console.log(err));
-
-const WeatherSchema = new mongoose.Schema({
-    city: String,
-    temperature: Number,
-    description: String,
-    humidity: Number,
-    windSpeed: Number,
-    date: {
-        type: Date,
-        default: Date.now
-    }
-});
-
-const Weather = mongoose.model("Weather", WeatherSchema);
-
 app.get("/", (req, res) => {
     res.send("Weather API Running");
+});
+
+app.get("/weather/:city", async (req, res) => {
+
+    try {
+
+        const city = req.params.city;
+
+        const url =
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}&units=metric`;
+
+        const response = await axios.get(url);
+
+        const data = {
+            city: response.data.name,
+            temperature: response.data.main.temp,
+            description: response.data.weather[0].description,
+            humidity: response.data.main.humidity,
+            windSpeed: response.data.wind.speed
+        };
+
+        res.json(data);
+
+    } catch (error) {
+
+        console.log(error.message);
+
+        res.status(500).json({
+            message: "Error fetching weather"
+        });
+    }
 });
 
 const PORT = process.env.PORT || 5000;
