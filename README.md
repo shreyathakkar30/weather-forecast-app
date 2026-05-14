@@ -1,23 +1,16 @@
 # Weather Forecast App
 
-A Full Stack Weather Forecast Web Application built using MERN Stack technologies.
+A full stack weather forecast application built using React, Node.js, Express, and OpenWeather API.
+
+## Features
+- Search weather by city
+- Real-time temperature
+- Humidity details
+- Wind speed
+- Weather conditions
 
 ## Tech Stack
-
 - React.js
 - Node.js
 - Express.js
-- MongoDB
 - OpenWeather API
-
-## Features
-
-- Search weather by city
-- Real-time weather information
-- Backend API integration
-- MongoDB database connection
-- Clean project structure
-
-## Project Status
-
-Currently under development 🚀
