@@ -4,7 +4,7 @@ A modern full-stack weather forecast application built using React, Node.js, Exp
 
 ## 🚀 Live Demo
 
-🔗 https://YOUR-VERCEL-LINK.vercel.app
+🔗 h[ttps://YOUR-VERCEL-LINK.vercel.app](https://weather-forecast-app-ten-dusky.vercel.app/)
 
 ---
 
@@ -46,7 +46,12 @@ A modern full-stack weather forecast application built using React, Node.js, Exp
 
 ## 📸 Screenshots
 
-(Add screenshots here later)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/97864c4b-6a52-4a4f-a2e0-967b81e14150" />
+<img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/642a8d53-bffd-4e7f-8d26-844346cb3fb5" />
+<img width="1600" height="807" alt="image" src="https://github.com/user-attachments/assets/1be5ec0f-da3f-4c30-b775-34a39a0ea254" />
+<img width="1600" height="808" alt="image" src="https://github.com/user-attachments/assets/f9634db4-dd5d-4023-af8a-57974ae75996" />
+
+
 
 ---
 
