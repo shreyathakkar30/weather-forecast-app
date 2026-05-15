@@ -4,8 +4,7 @@ A modern full-stack weather forecast application built using React, Node.js, Exp
 
 ## 🚀 Live Demo
 
-🔗 h[ttps://YOUR-VERCEL-LINK.vercel.app](https://weather-forecast-app-ten-dusky.vercel.app/)
-
+🔗 https://weather-forecast-app-ten-dusky.vercel.app/
 ---
 
 ## ✨ Features
