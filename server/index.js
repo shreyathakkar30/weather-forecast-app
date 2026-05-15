@@ -23,13 +23,21 @@ app.get("/weather/:city", async (req, res) => {
 
         const response = await axios.get(url);
 
-        const data = {
-            city: response.data.name,
-            temperature: response.data.main.temp,
-            description: response.data.weather[0].description,
-            humidity: response.data.main.humidity,
-            windSpeed: response.data.wind.speed
-        };
+const data = {
+
+  city: response.data.name,
+
+  temperature: response.data.main.temp,
+
+  description: response.data.weather[0].description,
+
+  humidity: response.data.main.humidity,
+
+  windSpeed: response.data.wind.speed,
+
+  icon: response.data.weather[0].icon
+
+};
 
         res.json(data);
 
