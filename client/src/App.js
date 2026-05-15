@@ -28,7 +28,7 @@ const getWeather = async () => {
     setError("");
 
     const response = await axios.get(
-      `http://localhost:5000/weather/${city}`
+      `https://weather-forecast-backend-ngrs.onrender.com/weather/${city}`
     );
 
     setWeather(response.data);
